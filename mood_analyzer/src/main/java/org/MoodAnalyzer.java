@@ -12,8 +12,16 @@ public class MoodAnalyzer {
     }
 
     public String analyseMood() {
-        if (message.toLowerCase().contains("sad"))
-            return "sad";
-        return "happy";
+        try {
+            if(message == null) {
+                throw new IllegalStateException("No mood specified");
+            }
+            if (message.toLowerCase().contains("sad"))
+                return "sad";
+            return "happy";
+        } catch(IllegalStateException e) {
+            return "Happy";
+        }
+        
     }
 }
