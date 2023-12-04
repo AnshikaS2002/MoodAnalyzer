@@ -1,0 +1,4 @@
+.vscode
+mood_analyzer/target
+mood_analyzer/pom.xml
+mood_analyzer/src/main/resources
